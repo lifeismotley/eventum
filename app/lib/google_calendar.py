@@ -58,7 +58,7 @@ class GoogleCalendarAPIClient():
 
         :returns: The Google Calendar service.
         """
-        storage = Storage(app.config['CREDENTIALS_PATH'])
+        storage = Storage(app.config['INSTALLED_APP_CREDENTIALS_PATH'])
         credentials = storage.get()
 
         if credentials is None:

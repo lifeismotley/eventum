@@ -1,9 +1,8 @@
 from flask import url_for
 from mongoengine import ValidationError
-from app import app, db
 from app.models.fields import DateField, TimeField
+from app import adi, db
 import markdown
-
 from datetime import datetime, timedelta
 now = datetime.now
 
@@ -40,7 +39,7 @@ class Event(db.Document):
     def image_url(self):
         if self.image:
             return self.image.url()
-        return url_for('static', filename=app.config['DEFAULT_EVENT_IMAGE'])
+        return url_for('static', filename=adi['DEFAULT_EVENT_IMAGE'])
 
     @property
     def index(self):
