@@ -1,3 +1,10 @@
+"""
+.. module:: BlogPost
+    :synopsis: A blog post database model.
+
+.. moduleauthor:: Dan Schlosser <dan@danrs.ch>
+"""
+
 from app.models import Post
 from app.lib.text import truncate_html
 from flask import url_for
